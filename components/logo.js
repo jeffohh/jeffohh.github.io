@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Text, useColorModeValue } from '@chakra-ui/react'
 import styled from '@emotion/styled'
 
-const LogoBox = style.span`
+const LogoBox = styled.span`
     font-weight: bold;
     font-size: 18px;
     display: inline-flex;
@@ -22,18 +22,17 @@ const Logo = ( ) => {
 
     return (
         <Link href="/">
-            <a>
-                <LogoBox>
-                    <Image src={footPrintImg} width={20} height={20} alt="logo" />
-                    <Text
-                        color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                        fontFamily="M PLUSH Rounded 1c"
-                        fontWeight="bold"
-                        ml={3}>
-                            Jeffrey Le
-                    </Text>
-                </LogoBox>
-            </a>
+            <LogoBox>
+                <Image src={footPrintImg} width={20} height={20} alt="logo" />
+                <Text
+                color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                fontFamily="M PLUSH Rounded 1c"
+                fontWeight="bold"
+                ml={3}
+                >
+                        Jeffrey Le
+                </Text>
+            </LogoBox>
         </Link>
     )
 }
