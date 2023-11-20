@@ -1,11 +1,16 @@
+import NextLink from 'next/link'
 import { 
     Container, 
     Box, 
     Heading, 
     Image, 
-    useColorModeValue 
+    Link,
+    useColorModeValue, 
+    Button
 } from '@chakra-ui/react'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Page = ( ) => {
     return (
@@ -46,12 +51,22 @@ const Page = ( ) => {
                 />
             </Box>
 
-        <Section delay={0.1}>
-            <Heading as="h3" variant="section-title">
-                Work
-            </Heading>
-            <p>Paragraph</p>
-        </Section>
+            <Section delay={0.1}>
+                <Heading as="h3" variant="section-title">
+                    About Me
+                </Heading>
+                <Paragraph>
+                    Freelance ROBLOX Developer based in Salt Lake City, Utah.
+                </Paragraph>
+            </Section>
+
+            <Box align="center" my={4}>
+                <NextLink href="/works">
+                    <Button rightIcon={<ChevronRightIcon/>}>
+                        See Portfolio
+                    </Button>
+                </NextLink>
+            </Box>
         </Container>
     )
 }
