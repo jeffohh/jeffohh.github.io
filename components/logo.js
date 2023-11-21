@@ -30,7 +30,7 @@ const Logo = ( ) => {
                 fontWeight="bold"
                 ml={3}
                 >
-                        Jeffrey Le
+                        Jeffrey B. Le
                 </Text>
             </LogoBox>
         </Link>
