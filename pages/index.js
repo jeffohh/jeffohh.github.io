@@ -22,7 +22,7 @@ const Page = ( ) => {
             p={3}
             mb={6}
             align="center">
-                Hello, I&apos;m Jeffrey
+                Hello, I&apos;m Jeffrey!
             </Box>
 
             <Box display={{md:'flex'}}>
@@ -58,7 +58,18 @@ const Page = ( ) => {
                     About Me
                 </Heading>
                 <Paragraph>
-                    Freelance ROBLOX Developer based in Salt Lake City, Utah. The quick brown fox jumps over the lazy dog.
+                    I&apos;ve been a ROBLOX Developer since 2016 and have done various commissions involving
+                    raycasting gun systems, gamemode systems (team deathmatch, domination, gun game, control point, payload,
+                    capture the flag, etc.), and graphical user interfaces for management and game design.
+                </Paragraph>
+                <br></br>
+                <Paragraph>
+                    I am currently studying at the University of Utah as an undergraduate, pursuing a Bachelors in Computer Science
+                    with Entertaining and Engineering Arts Empahsis. 
+                </Paragraph>
+                <br></br>
+                <Paragraph>
+                    I love designing games and am excited to apply what I learn in university into my future games.
                 </Paragraph>
 
                 <Box align="center" my={4}>
@@ -76,16 +87,12 @@ const Page = ( ) => {
                     Bio
                 </Heading>
                 <BioSection>
-                    <BioYear>2002</BioYear>
-                    Born in Salt Lake City, Utah.
-                </BioSection>
-                <BioSection>
                     <BioYear>2022</BioYear>
                     Associates of Computer Science at Salt Lake Community College.
                 </BioSection>
                 <BioSection>
-                    <BioYear>2022 to present</BioYear>
-                    Pursuing Bachelors of Computer Science with Entertaining and Engineering Arts Emphasis at University of Utah.
+                    <BioYear>2025</BioYear>
+                    Bachelors of Computer Science with Entertaining and Engineering Arts Emphasis at University of Utah.
                 </BioSection>
             </Section>
 
@@ -94,7 +101,7 @@ const Page = ( ) => {
                     Hobbies 😎
                 </Heading>
                 <Paragraph>
-                    Developing Games, Drawing, Violin, Guitar, Photography
+                    Developing Games, Drawing, Violin, Guitar, Photography, Freestyle Skateboarding
                 </Paragraph>
             </Section>
             
