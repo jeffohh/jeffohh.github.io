@@ -4,6 +4,7 @@ import { WorkGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
 import icon from '../public/images/icon.png'
+import thumbAceslinger from '../public/works/aceslinger.png'
 
 const Works = () => {
     return (
@@ -15,17 +16,21 @@ const Works = () => {
 
                 <SimpleGrid columns={[1, 1, 2]} gap={6}>
                     <Section>
-                        <WorkGridItem id="title" title="Title" thumbnail={icon}>
+                        <WorkGridItem
+                            id="aceslinger"
+                            title="Aceslinger"
+                            thumbnail={thumbAceslinger}
+                        >
+                            A ROBLOX game
+                        </WorkGridItem>
+                    </Section>
+                    <Section>
+                        <WorkGridItem id="title" title="Title" thumbnail={thumbAceslinger}>
                             The quick brown fox jumps over the lazy dog.
                         </WorkGridItem>
                     </Section>
                     <Section>
-                        <WorkGridItem id="title" title="Title" thumbnail={icon}>
-                            The quick brown fox jumps over the lazy dog.
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="title" title="Title" thumbnail={icon}>
+                        <WorkGridItem id="title" title="Title" thumbnail={thumbAceslinger}>
                             The quick brown fox jumps over the lazy dog.
                         </WorkGridItem>
                     </Section>
