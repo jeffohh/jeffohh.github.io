@@ -10,11 +10,12 @@ const nextConfig = {
         
         return config
     },
-    
+
     eslint: {
         ignoreDuringBuilds: true,
     },
-    output: 'export',
-  }
-   
-  module.exports = nextConfig
+
+    output: 'export'
+}
+
+module.exports = nextConfig
