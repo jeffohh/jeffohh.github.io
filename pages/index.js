@@ -61,8 +61,8 @@ const Page = ( ) => {
                     </Heading>
                     <Paragraph>
                         I&apos;ve been a ROBLOX Developer since 2016 and have done various commissions involving
-                        raycasting gun systems, gamemode systems (team deathmatch, domination, gun game, control point, payload,
-                        capture the flag, etc.), and graphical user interfaces for management and game design.
+                        raycasting gun systems, gamemode systems (Team Deathmatch, Domination, Gun Game, Control Point, Payload,
+                        Capture the Flag, etc.), and graphical user interfaces for management and game design.
                     </Paragraph>
                     <br></br>
                     <Paragraph>
