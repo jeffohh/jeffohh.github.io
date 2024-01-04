@@ -1,7 +1,4 @@
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
+module.exports = {
     webpack: (config, options) => {
         config.module.rules.push({
           test: /\.pdf/,
@@ -10,6 +7,5 @@ const nextConfig = {
     
         return config
     },
+    
 }
-   
-module.exports = nextConfig
