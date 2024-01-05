@@ -24,7 +24,10 @@ const Page = ( ) => {
                 p={3}
                 mb={6}
                 align="center">
-                    Hello, I&apos;m Jeffrey!
+                    Welcome to my Portfolio!<br/><hr style={{margin: "10px 0 10px 0"}}/>I do scripting commissions and run my own ROBLOX studio called&nbsp;
+                    <Link href="https://www.roblox.com/groups/3050300/Sky-Lantern" target='_blank'>
+                        Sky Lantern
+                    </Link>!
                 </Box>
 
                 <Box display={{md:'flex'}}>
