@@ -19,11 +19,12 @@ const Page = ( ) => {
         <Layout>
             <Container>
                 <Box
-                borderRadius="lg"
-                bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-                p={3}
-                mb={6}
-                align="center">
+                    borderRadius="lg"
+                    bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+                    p={3}
+                    mb={6}
+                    align="center"
+                >
                     Welcome to my Portfolio!<br/><hr style={{margin: "10px 0 10px 0"}}/>I do scripting commissions and run my own ROBLOX studio called&nbsp;
                     <Link href="https://www.roblox.com/groups/3050300/Sky-Lantern" target='_blank'>
                         Sky Lantern
@@ -40,20 +41,20 @@ const Page = ( ) => {
                 </Box>
 
                 <Box
-                flexShrink={0}
-                mt={{ base: 4, md: 0 }}
-                ml={{ md: 6 }}
-                align="center"
+                    flexShrink={0}
+                    mt={{ base: 4, md: 0 }}
+                    ml={{ md: 6 }}
+                    align="center"
                 >
                     <Image
-                    borderColor="whiteAlpha.800"
-                    borderWidth={2}
-                    borderStyle="solid"
-                    maxWidth="100px"
-                    display="inline-block"
-                    borderRadius="full"
-                    src="/images/icon.png"
-                    alt="Profile Image"
+                        borderColor="whiteAlpha.800"
+                        borderWidth={2}
+                        borderStyle="solid"
+                        maxWidth="100px"
+                        display="inline-block"
+                        borderRadius="full"
+                        src="/images/icon.png"
+                        alt="Profile Image"
                     />
                 </Box>
 
@@ -70,7 +71,7 @@ const Page = ( ) => {
                     <br></br>
                     <Paragraph>
                         I am currently studying at the University of Utah as an undergraduate, pursuing a Bachelors in Computer Science
-                        with Entertaining and Engineering Arts Empahsis. 
+                        with Entertainment Arts and Engineering Empahsis. 
                     </Paragraph>
                     <br></br>
                     <Paragraph>
@@ -97,7 +98,7 @@ const Page = ( ) => {
                     </BioSection>
                     <BioSection>
                         <BioYear>2025</BioYear>
-                        Bachelors of Computer Science with Entertaining and Engineering Arts Emphasis at University of Utah.
+                        Bachelors of Computer Science with Entertainment Arts and Engineering Emphasis at University of Utah.
                     </BioSection>
                 </Section>
 

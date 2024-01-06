@@ -29,11 +29,6 @@ const Works = () => {
                             The quick brown fox jumps over the lazy dog.
                         </WorkGridItem>
                     </Section>
-                    <Section>
-                        <WorkGridItem id="title" title="Title" thumbnail={thumbAceslinger}>
-                            The quick brown fox jumps over the lazy dog.
-                        </WorkGridItem>
-                    </Section>
                 </SimpleGrid>
             </Container>
         </Layout>
