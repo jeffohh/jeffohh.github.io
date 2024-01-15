@@ -25,10 +25,10 @@ const Logo = ( ) => {
             <LogoBox>
                 {/* <Image src={footPrintImg} width={20} height={20} alt="logo" /> */}
                 <Text
-                color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-                fontFamily="M PLUSH Rounded 1c"
-                fontWeight="bold"
-                ml={3}
+                    color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                    fontFamily="M PLUSH Rounded 1c"
+                    fontWeight="bold"
+                    ml={3}
                 >
                         Jeffrey B. Le
                 </Text>
