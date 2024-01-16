@@ -1,18 +1,32 @@
 import NextLink from 'next/link'
 import { 
+    Button,
     Container, 
     Box, 
     Heading, 
     Image, 
     Link,
-    useColorModeValue, 
-    Button
+    List,
+    ListItem,
+    Icon,
+    useColorModeValue,
+    chakra,
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from '../components/layouts/article'
 import { BioSection, BioYear } from '../components/bio'
+import {
+    SiRoblox,
+    SiGithub,
+    SiLinkedin,
+    SiYoutube
+} from 'react-icons/si'
+
+const ProfileImage = chakra(Image, {
+    shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+})
 
 const Page = ( ) => {
     return (
@@ -38,25 +52,33 @@ const Page = ( ) => {
                         </Heading>
                         <p>Computer Science Undergraduate</p>
                     </Box>
+                    <Box
+                        flexShrink={0}
+                        mt={{ base: 4, md: 0 }}
+                        ml={{ md: 6 }}
+                        textAlign="center"
+                    >
+                        <Box
+                            borderColor="whiteAlpha.800"
+                            borderWidth={2}
+                            borderStyle="solid"
+                            w="100px"
+                            h="100px"
+                            display="inline-block"
+                            borderRadius="full"
+                            overflow="hidden"
+                        >
+                            <ProfileImage
+                                src="/images/icons/profile.png"
+                                alt="Profile Image"
+                                borderRadius="full"
+                                width="100"
+                                height="100"
+                            />
+                        </Box>
+                    </Box>
                 </Box>
 
-                <Box
-                    flexShrink={0}
-                    mt={{ base: 4, md: 0 }}
-                    ml={{ md: 6 }}
-                    align="center"
-                >
-                    <Image
-                        borderColor="whiteAlpha.800"
-                        borderWidth={2}
-                        borderStyle="solid"
-                        maxWidth="100px"
-                        display="inline-block"
-                        borderRadius="full"
-                        src="/images/icons/profile.png"
-                        alt="Profile Image"
-                    />
-                </Box>
 
                 <Section delay={0.1}>
 
@@ -75,7 +97,7 @@ const Page = ( ) => {
                     </Paragraph>
                     <br></br>
                     <Paragraph>
-                        I love designing games and am excited to apply what I learn in university into my future games.
+                        I love designing games and am excited to apply what I learn in university into my future games/software.
                     </Paragraph>
 
                     <Box align="center" my={4}>
@@ -111,6 +133,61 @@ const Page = ( ) => {
                     </Paragraph>
                 </Section>
                 
+                <Section delay={0.3}>
+                    <Heading as="h3" variant="section-title">
+                        Socials
+                    </Heading>
+                    <List>
+
+                        <ListItem>
+                            <Link href='https://github.com/jeffohh' target='_blank'>
+                                <Button
+                                    variant="ghost"
+                                    colorScheme='teal'
+                                    leftIcon={<Icon as={SiGithub}/>}
+                                >
+                                    @jeffohh
+                                </Button>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link href='https://www.roblox.com/users/15912341/profile' target='_blank'>
+                                <Button
+                                    variant="ghost"
+                                    colorScheme='teal'
+                                    leftIcon={<Icon as={SiRoblox}/>}
+                                >
+                                    @PhantomVisual
+                                </Button>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link href='https://www.linkedin.com/in/jeffrey-brandon-le/' target='_blank'>
+                                <Button
+                                    variant="ghost"
+                                    colorScheme='teal'
+                                    leftIcon={<Icon as={SiLinkedin}/>}
+                                >
+                                    @Jeffrey Le
+                                </Button>
+                            </Link>
+                        </ListItem>
+
+                        <ListItem>
+                            <Link href='https://www.youtube.com/@jellohh' target='_blank'>
+                                <Button
+                                    variant="ghost"
+                                    colorScheme='teal'
+                                    leftIcon={<Icon as={SiYoutube}/>}
+                                >
+                                    @jellohh
+                                </Button>
+                            </Link>
+                        </ListItem>
+                    </List>
+                </Section>
             </Container>
         </Layout>
     )
