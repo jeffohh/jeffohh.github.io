@@ -3,21 +3,21 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
-import thumbAceslinger from '../public/images/works/aceslinger.png'
+import thumbGameDay from '../public/images/posts/gdac-first.jpg'
 
 const Posts = () => (
     <Layout title="Posts">
-        <Container>
+        <Container maxW="container.sm">
             <Heading as="h4" fontSize={20} mb={4}>
                 Posts
             </Heading>
-            <Section delay={0.1}>
+            <Section delay={0.2}>
                 <SimpleGrid columns={[1, 2, 2]} gap={6}>
                     <GridItem
-                        title="test workflow"
-                        thumbnail={thumbAceslinger}
+                        title="🥇 First Place"
+                        thumbnail={thumbGameDay}
                     >
-
+                    2023 Game Day Analytics Challenge
                     </GridItem>
                 </SimpleGrid>
             </Section>

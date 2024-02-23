@@ -31,7 +31,7 @@ const ProfileImage = chakra(Image, {
 const Page = ( ) => {
     return (
         <Layout>
-            <Container>
+            <Container maxW="container.sm">
                 <Box
                     borderRadius="lg"
                     bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
@@ -133,7 +133,7 @@ const Page = ( ) => {
                     </Paragraph>
                 </Section>
                 
-                <Section delay={0.3}>
+                <Section delay={0.4}>
                     <Heading as="h3" variant="section-title">
                         Socials
                     </Heading>
