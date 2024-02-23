@@ -17,55 +17,57 @@ import iconDaedalusSenate from '../public/images/icons/daedalus-senate.png'
 const Works = () => {
     return (
         <Layout>
-            <Container>
+            <Container maxW="container.sm">
                 {/* Games */}
-                <Heading as="h3" fontSize={20} mb={4}>
-                    Games
-                </Heading>
+                <Section delay={0.2}>
+                    <Heading as="h3" fontSize={20} mb={4}>
+                        Games
+                    </Heading>
 
-                <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                    <Section>
-                        <WorkGridItem id="radio-loaded" title="Radio Loaded" thumbnail={thumbRadioLoaded}>
-                            A rhythm based third-person shooter game.
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="wonderland" title="Wonderland" thumbnail={thumbWonderland}>
-                            A puzzle horror game.
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem
-                            id="aceslinger"
-                            title="Aceslinger"
-                            thumbnail={thumbAceslinger}
-                        >
-                            A multiplayer western-themed combat game.
-                        </WorkGridItem>
-                    </Section>
-                </SimpleGrid>
+                    <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="radio-loaded" title="Radio Loaded" thumbnail={thumbRadioLoaded}>
+                                A rhythm based third-person shooter game.
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="wonderland" title="Wonderland" thumbnail={thumbWonderland}>
+                                A puzzle horror game.
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem
+                                id="aceslinger"
+                                title="Aceslinger"
+                                thumbnail={thumbAceslinger}
+                            >
+                                A multiplayer western-themed combat game.
+                            </WorkGridItem>
+                        </Section>
+                    </SimpleGrid>
+                </Section>
 
                 {/* Software */}
-                <Section delay={0.2}>
+                <Section delay={0.3}>
                     <Divider my={6}/>
 
                     <Heading as="h3" fontSize={20} mb={4}>
                         Software
                     </Heading>
-                </Section>
 
-                <SimpleGrid columns={[1, 1, 2]} gap={6}>
-                    <Section>
-                        <WorkGridItem id="kitchen-killer" title="Kitchen Killer" thumbnail={thumbKitchenKiller}>
-                            A asian cuisine cooking app.
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="sprite-editor" title="Sprite Editor" thumbnail={thumbSpriteEditor}>
-                            A sprite editing app.
-                        </WorkGridItem>
-                    </Section>
-                </SimpleGrid>
+                    <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="kitchen-killer" title="Kitchen Killer" thumbnail={thumbKitchenKiller}>
+                                A asian cuisine cooking app.
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="sprite-editor" title="Sprite Editor" thumbnail={thumbSpriteEditor}>
+                                A sprite editing app.
+                            </WorkGridItem>
+                        </Section>
+                    </SimpleGrid>
+                </Section>
 
                 {/* Studio & Groups */}
                 <Section delay={0.4}>
@@ -74,20 +76,20 @@ const Works = () => {
                     <Heading as="h3" fontSize={20} mb={4}>
                         Studios & Groups
                     </Heading>
-                </Section>
 
-                <SimpleGrid columns={[1, 1, 3]} gap={6}>
-                    <Section>
-                        <WorkGridItem id="sky-lantern" thumbnail={iconSkyLantern}>
-                            Sky Lantern
-                        </WorkGridItem>
-                    </Section>
-                    <Section>
-                        <WorkGridItem id="daedalus-senate" thumbnail={iconDaedalusSenate}>
-                            Daedalus Senate
-                        </WorkGridItem>
-                    </Section>
-                </SimpleGrid>
+                    <SimpleGrid columns={[1, 1, 3]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="sky-lantern" thumbnail={iconSkyLantern}>
+                                Sky Lantern
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="daedalus-senate" thumbnail={iconDaedalusSenate}>
+                                Daedalus Senate
+                            </WorkGridItem>
+                        </Section>
+                    </SimpleGrid>
+                </Section>
 
             </Container>
         </Layout>
