@@ -7,7 +7,7 @@ import Layout from '../../components/layouts/article'
 const Work = () => {
     return (
         <Layout title="Radio Loaded">
-            <Container>
+            <Container maxW="container.sm">
                 <Title>
                     Radio Loaded <Badge>2023</Badge>
                 </Title>
