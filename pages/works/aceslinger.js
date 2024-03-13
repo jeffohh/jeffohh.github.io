@@ -7,7 +7,7 @@ import Layout from '../../components/layouts/article'
 const Work = () => {
     return (
         <Layout title="Aceslinger">
-            <Container>
+            <Container maxW="container.sm">
                 <Title>
                     Aceslinger <Badge>2019</Badge>
                 </Title>

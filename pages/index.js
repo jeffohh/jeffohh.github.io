@@ -170,7 +170,7 @@ const Page = ( ) => {
                                     colorScheme='teal'
                                     leftIcon={<Icon as={SiLinkedin}/>}
                                 >
-                                    @Jeffrey Le
+                                    @jeffrey-brandon-le
                                 </Button>
                             </Link>
                         </ListItem>
