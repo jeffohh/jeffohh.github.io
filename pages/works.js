@@ -6,6 +6,7 @@ import Layout from '../components/layouts/article'
 import thumbAceslinger from '../public/images/works/aceslinger.png'
 import thumbRadioLoaded from '../public/images/works/radio-loaded.png'
 import thumbWonderland from '../public/images/works/wonderland.png'
+import thumbZippah from '../public/images/works/zippah.png'
 
 import thumbSpriteEditor from '../public/images/works/sprite-editor.png'
 import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
@@ -13,6 +14,14 @@ import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
 import iconSkyLantern from '../public/images/icons/sky-lantern.png'
 import iconDaedalusSenate from '../public/images/icons/daedalus-senate.png'
 
+import iconArvorianConfederation from '../public/images/icons/arvorian-confederation.png'
+import iconNightfallClan from '../public/images/icons/nightfall-clan.png'
+import iconRSF from '../public/images/icons/rsf.png'
+import iconOutlawPosse from '../public/images/icons/outlaw-posse.png'
+import iconMesmer from '../public/images/icons/mesmer.png'
+import iconDominionOfValyria from '../public/images/icons/dominion-of-valyria.png'
+import iconVestarianRepublic from '../public/images/icons/vestarian-republic.png'
+import iconReignOfChaos from '../public/images/icons/region-of-chaos.png'
 
 const Works = () => {
     return (
@@ -36,12 +45,13 @@ const Works = () => {
                             </WorkGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem
-                                id="aceslinger"
-                                title="Aceslinger"
-                                thumbnail={thumbAceslinger}
-                            >
+                            <WorkGridItem id="aceslinger" title="Aceslinger" thumbnail={thumbAceslinger}>
                                 A multiplayer western-themed combat game.
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="zippah" title="Zippah" thumbnail={thumbZippah}>
+                                A local-multiplayer dice game.
                             </WorkGridItem>
                         </Section>
                     </SimpleGrid>
@@ -86,6 +96,46 @@ const Works = () => {
                         <Section>
                             <WorkGridItem id="daedalus-senate" thumbnail={iconDaedalusSenate}>
                                 Daedalus Senate
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="arvorian-confederation" thumbnail={iconArvorianConfederation}>
+                                Arvorian Confederation
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="nightfall-clan" thumbnail={iconNightfallClan}>
+                                Nightfall Clan
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="rsf" thumbnail={iconRSF}>
+                                RSF
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="outlaw-posse" thumbnail={iconOutlawPosse}>
+                                Outlaw Posse
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="mesmer" thumbnail={iconMesmer}>
+                                Mesmer
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="dominion-of-valyria" thumbnail={iconDominionOfValyria}>
+                                Dominion of Valyria
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="vestarian-republic" thumbnail={iconVestarianRepublic}>
+                                Vestarian Republic
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="region-of-chaos" thumbnail={iconReignOfChaos}>
+                                Region of Chaos
                             </WorkGridItem>
                         </Section>
                     </SimpleGrid>
