@@ -32,7 +32,7 @@ const Work = () => {
                 </List>
 
                 <WorkImage src="/images/works/sprite-editor.png" alt="Sprite Editor"/>
-                <AspectRatio maxW="640px" ratio={1.7} my={4}>
+                <AspectRatio maxW="640px" ratio={16/9} my={4}>
                     <iframe width="560" height="315"
                     src="https://www.youtube.com/embed/YeS-IimQMaE?si=qb0X6NIpQMS_FTM2"
                     title="YouTube video player"

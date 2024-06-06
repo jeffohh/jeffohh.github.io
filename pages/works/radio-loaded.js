@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem } from "@chakra-ui/react"
+import { Container, Badge, Link, List, ListItem, AspectRatio } from "@chakra-ui/react"
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 import { Title, WorkImage, Meta } from "../../components/work"
 import P from '../../components/paragraph'
@@ -30,6 +30,19 @@ const Work = () => {
                 </List>
 
                 <WorkImage src="/images/works/radio-loaded.png" alt="Radio Loaded"/>
+                <WorkImage src="/images/works/radio-loaded/1.png" alt="radio-loaded-ss1"/>
+                <WorkImage src="/images/works/radio-loaded/2.png" alt="radio-loaded-ss2"/>
+                <WorkImage src="/images/works/radio-loaded/3.png" alt="radio-loaded-ss3"/>
+                <AspectRatio maxW="640px" ratio={16/9} my={4}>
+                    <iframe width="1128" height="644"
+                    src="https://www.youtube.com/embed/jFtLOKybEis"
+                    title="Radio Loaded - Trailer"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                    </iframe>
+                </AspectRatio>
             </Container>
         </Layout>
     )

@@ -1,6 +1,6 @@
 import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
 import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+import { WorkGridItem, GroupGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
 import thumbAceslinger from '../public/images/works/aceslinger.png'
@@ -89,54 +89,54 @@ const Works = () => {
 
                     <SimpleGrid columns={[1, 1, 3]} gap={6}>
                         <Section>
-                            <WorkGridItem id="sky-lantern" thumbnail={iconSkyLantern}>
+                            <GroupGridItem id="sky-lantern" thumbnail={iconSkyLantern}>
                                 Sky Lantern
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="daedalus-senate" thumbnail={iconDaedalusSenate}>
+                            <GroupGridItem id="daedalus-senate" thumbnail={iconDaedalusSenate}>
                                 Daedalus Senate
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="arvorian-confederation" thumbnail={iconArvorianConfederation}>
+                            <GroupGridItem id="arvorian-confederation" thumbnail={iconArvorianConfederation}>
                                 Arvorian Confederation
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="nightfall-clan" thumbnail={iconNightfallClan}>
+                            <GroupGridItem id="nightfall-clan" thumbnail={iconNightfallClan}>
                                 Nightfall Clan
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="rsf" thumbnail={iconRSF}>
+                            <GroupGridItem id="rsf" thumbnail={iconRSF}>
                                 RSF
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="outlaw-posse" thumbnail={iconOutlawPosse}>
+                            <GroupGridItem id="outlaw-posse" thumbnail={iconOutlawPosse}>
                                 Outlaw Posse
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="mesmer" thumbnail={iconMesmer}>
+                            <GroupGridItem id="mesmer" thumbnail={iconMesmer}>
                                 Mesmer
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="dominion-of-valyria" thumbnail={iconDominionOfValyria}>
+                            <GroupGridItem id="dominion-of-valyria" thumbnail={iconDominionOfValyria}>
                                 Dominion of Valyria
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="vestarian-republic" thumbnail={iconVestarianRepublic}>
+                            <GroupGridItem id="vestarian-republic" thumbnail={iconVestarianRepublic}>
                                 Vestarian Republic
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                         <Section>
-                            <WorkGridItem id="region-of-chaos" thumbnail={iconReignOfChaos}>
+                            <GroupGridItem id="region-of-chaos" thumbnail={iconReignOfChaos}>
                                 Region of Chaos
-                            </WorkGridItem>
+                            </GroupGridItem>
                         </Section>
                     </SimpleGrid>
                 </Section>
