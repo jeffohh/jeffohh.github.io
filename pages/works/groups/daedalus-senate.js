@@ -1,4 +1,4 @@
-import { Container, Badge, Link, List, ListItem, Box, Heading, Divider} from "@chakra-ui/react"
+import { Container, Badge, Link, List, ListItem, Box, Heading, Divider } from "@chakra-ui/react"
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 import { Title, WorkImage, Meta } from "../../../components/work"
 import P from '../../../components/paragraph'
@@ -46,10 +46,12 @@ const media2023 = [
     { type: "video", src: "/images/groups/daedalus-senate/2023-1.mp4" },
     { type: "video", src: "/images/groups/daedalus-senate/2023-2.mp4" },
     { type: "video", src: "/images/groups/daedalus-senate/2023-3.mp4" },
+    { type: "video", src: "/images/groups/daedalus-senate/2023-4.mp4" },
 ];
 
 const media2024 = [
     { type: "gif", src: "/images/groups/daedalus-senate/2024-1.gif" },
+    { type: "video", src: "/images/groups/daedalus-senate/2024-2.mp4" },
 ];
 
 const Work = () => {
@@ -60,28 +62,32 @@ const Work = () => {
                     Daedalus Senate <Badge>2017 - Present</Badge>
                 </Title>
                 <P>
-                    Back in 2017, I met an old friend who I used to play ROBLOX with from a group called
-                    Frost Mage Clan. At the time, he was running his group, Daedalus Senate and I decided
-                    to use my scripting knowledge to help him out with some things. Eventually, this lead
-                    to him recruiting me on the spot as the Lead Scripter.
+                    In 2017, I reconnected with an old friend from the Frost Mage Clan on ROBLOX, a group where we shared many gaming experiences.
+                    At the time, he was leading a new group, Daedalus Senate, and I saw an opportunity to apply my scripting skills to assist him.
+                    My contributions quickly led to my recruitment as the Lead Scripter.
                 </P>
                 <br></br>
                 <P>
-                    I created various technologies such as raycasting guns, terminal systems, payload systems,
-                    UI designs & animations, player movement systems, training systems, etc. I also participated
-                    in map design and level balancing.
+                    During my tenure with Daedalus Senate, I developed a range of innovative technologies, such as
+                    raycasting guns, terminal systems, payload systems, UI designs & animations, player movement systems, training systems, etc.
+                    I also participated in map design and level balancing.
                 </P>
                 <br></br>
                 <P>
-                    Most, if not all, projects were done free-of-charge. This group allowed me to explore new
-                    ways of scripting, providing an active platform to showcase my discoveries. I got to work
-                    with assets and experiment with concepts that were never seen before in the gun fighting
-                    community.
+                    Most, if not all, projects were done free-of-charge. This experience provided me with a platform to explore and innovate,
+                    experimenting with concepts that were new to the gun fighting community on ROBLOX. It allowed me to push the boundaries of what
+                    was possible and showcase my discoveries to a wide audience.
+                </P>
+                <br></br>
+                <P>
+                    Working with Daedalus Senate not only honed my technical skills but also taught me valuable lessons in
+                    collaboration, project management, and creative problem-solving. This journey has fueled my passion for game development,
+                    and I am excited to bring my expertise to new and challenging projects in the future.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Role</Meta>
-                        <span>Lead Scripter</span>
+                        <span>Lead Scripter, Animator, UI Designer</span>
                     </ListItem>
                     <ListItem>
                         <Meta>Website</Meta>
@@ -137,7 +143,7 @@ const Work = () => {
                 <Divider my={6}/>
 
                 <Heading as="h3" variant="section-title">
-                    2023
+                    2024
                 </Heading>
                 <MediaGrid mediaItems={media2024} />
             </Container>
