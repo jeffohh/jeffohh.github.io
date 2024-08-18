@@ -21,7 +21,7 @@ import iconOutlawPosse from '../public/images/icons/outlaw-posse.png'
 import iconMesmer from '../public/images/icons/mesmer.png'
 import iconDominionOfValyria from '../public/images/icons/dominion-of-valyria.png'
 import iconVestarianRepublic from '../public/images/icons/vestarian-republic.png'
-import iconReignOfChaos from '../public/images/icons/region-of-chaos.png'
+import iconReignOfChaos from '../public/images/icons/reign-of-chaos.png'
 
 const Works = () => {
     return (
@@ -134,8 +134,8 @@ const Works = () => {
                             </GroupGridItem>
                         </Section>
                         <Section>
-                            <GroupGridItem id="region-of-chaos" thumbnail={iconReignOfChaos}>
-                                Region of Chaos
+                            <GroupGridItem id="reign-of-chaos" thumbnail={iconReignOfChaos}>
+                                Reign of Chaos
                             </GroupGridItem>
                         </Section>
                     </SimpleGrid>
