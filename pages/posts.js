@@ -16,6 +16,7 @@ const Posts = () => (
                     <GridItem
                         title="🥇 First Place"
                         thumbnail={thumbGameDay}
+                        href="https://eccles.utah.edu/news/big-winners-at-the-2023-game-day-analytics-challenge/"
                     >
                     2023 Game Day Analytics Challenge
                     </GridItem>
