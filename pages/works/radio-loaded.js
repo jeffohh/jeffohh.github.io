@@ -12,16 +12,30 @@ const Work = () => {
                     Radio Loaded <Badge>2023</Badge>
                 </Title>
                 <P>
-                    A rhythm based third-person shooter game.
+                    Radio Loaded is a rhythm based third-person shooter game in which you play as Jeff, a hitman agent.
+                    With a few guns, a pair of earbuds, and a walkman with some bangerbeats, you can get the job done.
+                    Complete your contracts by shooting enemies to the beat of the music. The more on-time you are with
+                    the beat, the more effective you'll get at killing enemies.
+                </P>
+                <br></br>
+                <P>
+                    Radio Loaded was a 3-month project created in collaboration of
+                    Jeffrey Le  (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
+                    Junao Xiong (<Link href="https://github.com/SparkingBones">@SparkingBones</Link>),
+                    Siyu Liu, and
+                    Karston Modlinsky. This served as our EAE 3710 Traditional Game Development project for
+                    the Entertainment Arts and Engineering program at the University of Utah.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Role</Meta>
-                        <span>Lead Engineer, UI Designer & Animator</span>
+                        <span>Lead Engineer, UI Designer & Animator, Vision Holder</span>
                     </ListItem>
                     <ListItem>
                         <Meta>Website</Meta>
-                        <span>N/A</span>
+                        <Link href="https://github.com/jeffohh/Radio-Loaded">
+                            https://github.com/jeffohh/Radio-Loaded<ExternalLinkIcon mx="2px"/>
+                        </Link>
                     </ListItem>
                     <ListItem>
                         <Meta>Platform</Meta>
@@ -29,6 +43,7 @@ const Work = () => {
                     </ListItem>
                 </List>
 
+                <WorkImage src="/images/works/radio-loaded/pitch.png" alt="Radio Loaded Pitch"/>
                 <WorkImage src="/images/works/radio-loaded.png" alt="Radio Loaded"/>
                 <WorkImage src="/images/works/radio-loaded/1.png" alt="radio-loaded-ss1"/>
                 <WorkImage src="/images/works/radio-loaded/2.png" alt="radio-loaded-ss2"/>
