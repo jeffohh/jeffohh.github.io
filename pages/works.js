@@ -8,8 +8,9 @@ import thumbRadioLoaded from '../public/images/works/radio-loaded.png'
 import thumbWonderland from '../public/images/works/wonderland.png'
 import thumbZippah from '../public/images/works/zippah.png'
 
-import thumbSpriteEditor from '../public/images/works/sprite-editor.png'
 import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
+import thumbSpriteEditor from '../public/images/works/sprite-editor.png'
+import thumbPVEye from '../public/images/works/pveye.png'
 
 import iconSkyLantern from '../public/images/icons/sky-lantern.png'
 import iconDaedalusSenate from '../public/images/icons/daedalus-senate.png'
@@ -74,6 +75,11 @@ const Works = () => {
                         <Section>
                             <WorkGridItem id="sprite-editor" title="Sprite Editor" thumbnail={thumbSpriteEditor}>
                                 A sprite editing app.
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="phantomvisual-eye" title="PhantomVisual's Eye" thumbnail={thumbPVEye}>
+                                An exploit-monitoring deployable app.
                             </WorkGridItem>
                         </Section>
                     </SimpleGrid>
