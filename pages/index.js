@@ -10,7 +10,7 @@ import {
     ListItem,
     Icon,
     useColorModeValue,
-    chakra,
+    chakra
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -101,7 +101,7 @@ const Page = ( ) => {
                     </Paragraph>
 
                     <Box align="center" my={4}>
-                        <NextLink href="/works">
+                        <NextLink scroll={false} href="/works">
                             <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
                                 See Portfolio
                             </Button>
