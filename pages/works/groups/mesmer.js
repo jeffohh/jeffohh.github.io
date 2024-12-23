@@ -5,12 +5,25 @@ import P from '../../../components/paragraph'
 import MediaGrid from '../../../components/media-grid'
 import Layout from '../../../components/layouts/article'
 
+const media2017 = [
+    { type: "video", src: "/images/groups/mesmer/2017-1.mp4" },
+    { type: "video", src: "/images/groups/mesmer/2017-2.mp4" },
+    { type: "image", src: "/images/groups/mesmer/2017-3.png" },
+];
+
+const media2021 = [
+    { type: "image", src: "/images/groups/mesmer/2021-1.png" },
+    { type: "video", src: "/images/groups/mesmer/2021-2.mp4" },
+    { type: "video", src: "/images/groups/mesmer/2021-3.mp4" },
+    { type: "video", src: "/images/groups/mesmer/2021-4.mp4" },
+];
+
 const Work = () => {
     return (
         <Layout title="Mesmer">
             <Container maxW="container.sm">
                 <Title>
-                    Mesmer <Badge>2017</Badge>
+                    Mesmer <Badge>2017</Badge> <Badge>2021</Badge>
                 </Title>
                 <P>
                     WIP...
@@ -37,6 +50,18 @@ const Work = () => {
                         <WorkImage src="/images/icons/mesmer.png" alt="Mesmer"/>
                     </Box>
                 </Box>
+
+                <Heading as="h3" variant="section-title">
+                    2017
+                </Heading>
+                <MediaGrid mediaItems={media2017} />
+                <Divider my={6}/>
+
+                <Heading as="h3" variant="section-title">
+                    2021
+                </Heading>
+                <MediaGrid mediaItems={media2021} />
+                <Divider my={6}/>
 
             </Container>
         </Layout>
