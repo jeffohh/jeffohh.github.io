@@ -9,8 +9,10 @@ import {
     List,
     ListItem,
     Icon,
+    Text,
     useColorModeValue,
-    chakra
+    chakra,
+    Badge
 } from '@chakra-ui/react'
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
@@ -23,6 +25,8 @@ import {
     SiLinkedin,
     SiYoutube
 } from 'react-icons/si'
+import { Meta } from "../components/work"
+
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -121,10 +125,22 @@ const Page = ( ) => {
                     <BioSection>
                         <BioYear>2025</BioYear>
                         Bachelors of Computer Science with Entertainment Arts and Engineering Emphasis at University of Utah.
+                        <Text align="center" mr={20} textIndent="0em" paddingLeft="0em">
+                            <Badge><Link href="https://handbook.cs.utah.edu/2023-2024/CS/Academics/tracks.php" pl={2} pr={2} target="_blank">Tracks</Link></Badge>
+                        </Text>
+                        <Text textIndent="0em" paddingLeft="0em">
+                            <Meta>Software Development</Meta>
+                            <Meta>Computer Systems</Meta>
+                            <Meta>Programming Languages</Meta>
+                        </Text>
+                    </BioSection>
+                    <BioSection>
+                        <BioYear>2027</BioYear>
+                        Masters of Entertainment Arts and Engineering (Engineering Track) at University of Utah.
                     </BioSection>
                 </Section>
 
-                <Section delay={0.3}>
+                <Section delay={0.4}>
                     <Heading as="h3" variant="section-title">
                         Hobbies 😎
                     </Heading>
@@ -133,7 +149,7 @@ const Page = ( ) => {
                     </Paragraph>
                 </Section>
                 
-                <Section delay={0.4}>
+                <Section delay={0.5}>
                     <Heading as="h3" variant="section-title">
                         Socials
                     </Heading>
