@@ -4,6 +4,7 @@ import { WorkGridItem, GroupGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
 import thumbDinosTD from '../public/images/works/dinos-td.png'
+import thumbDiceTime from '../public/images/works/dice-time.png'
 import thumbRadioLoaded from '../public/images/works/radio-loaded.png'
 import thumbWonderland from '../public/images/works/wonderland.png'
 import thumbAceslinger from '../public/images/works/aceslinger.png'
@@ -42,6 +43,11 @@ const Works = () => {
                             </WorkGridItem>
                         </Section>
                         <Section>
+                            <WorkGridItem id="dice-time" title="Dice Time!" thumbnail={thumbDiceTime}>
+                                An online-multiplayer team party game!
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
                             <WorkGridItem id="radio-loaded" title="Radio Loaded" thumbnail={thumbRadioLoaded}>
                                 A rhythm based third-person shooter game.
                             </WorkGridItem>
@@ -53,7 +59,7 @@ const Works = () => {
                         </Section>
                         <Section>
                             <WorkGridItem id="aceslinger" title="Aceslinger" thumbnail={thumbAceslinger}>
-                                A multiplayer western-themed combat game.
+                                A online-multiplayer western-themed combat game.
                             </WorkGridItem>
                         </Section>
                         <Section>
