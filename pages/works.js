@@ -3,9 +3,10 @@ import Section from '../components/section'
 import { WorkGridItem, GroupGridItem } from '../components/grid-item'
 import Layout from '../components/layouts/article'
 
-import thumbAceslinger from '../public/images/works/aceslinger.png'
+import thumbDinosTD from '../public/images/works/dinos-td.png'
 import thumbRadioLoaded from '../public/images/works/radio-loaded.png'
 import thumbWonderland from '../public/images/works/wonderland.png'
+import thumbAceslinger from '../public/images/works/aceslinger.png'
 import thumbZippah from '../public/images/works/zippah.png'
 
 import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
@@ -35,6 +36,11 @@ const Works = () => {
                     </Heading>
 
                     <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="dinos-td" title="Dinos TD" thumbnail={thumbDinosTD}>
+                                A dinosaur-themed tower defense game.
+                            </WorkGridItem>
+                        </Section>
                         <Section>
                             <WorkGridItem id="radio-loaded" title="Radio Loaded" thumbnail={thumbRadioLoaded}>
                                 A rhythm based third-person shooter game.
