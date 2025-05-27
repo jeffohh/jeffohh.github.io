@@ -54,7 +54,8 @@ const Page = ( ) => {
                         <Heading as="h2" variant="page-title">
                             Jeffrey B. Le
                         </Heading>
-                        <p>Computer Science Undergraduate</p>
+                        <p>Computer Science Graduate</p>
+                        <p>Entertainment Arts and Engineering Master's Candidate</p>
                     </Box>
                     <Box
                         flexShrink={0}
@@ -96,8 +97,8 @@ const Page = ( ) => {
                     </Paragraph>
                     <br></br>
                     <Paragraph>
-                        I am currently studying at the University of Utah as an undergraduate, pursuing a Bachelors in Computer Science
-                        with Entertainment Arts and Engineering Empahsis. 
+                        I am currently studying at the University of Utah, pursuing a Masters in Entertaiment Arts
+                        and Engineering on the Engineering Track.
                     </Paragraph>
                     <br></br>
                     <Paragraph>
