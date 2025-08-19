@@ -13,6 +13,7 @@ import thumbZippah from '../public/images/works/zippah.png'
 import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
 import thumbSpriteEditor from '../public/images/works/sprite-editor.png'
 import thumbPVEye from '../public/images/works/pveye.png'
+import thumbPVEyeV2 from '../public/images/works/pveye-v2.png'
 
 import iconSkyLantern from '../public/images/icons/sky-lantern.png'
 import iconDaedalusSenate from '../public/images/icons/daedalus-senate.png'
@@ -79,6 +80,11 @@ const Works = () => {
                     </Heading>
 
                     <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="pveye-v2" title="!pveye v2" thumbnail={thumbPVEyeV2}>
+                                Predecessor of PVEye, screen spectating app.
+                            </WorkGridItem>
+                        </Section>
                         <Section>
                             <WorkGridItem id="kitchen-killer" title="Kitchen Killer" thumbnail={thumbKitchenKiller}>
                                 A asian cuisine cooking app.
