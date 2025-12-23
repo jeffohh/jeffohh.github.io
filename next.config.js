@@ -15,6 +15,8 @@ const nextConfig = {
         ignoreDuringBuilds: true,
     },
 
+    turbopack: {},
+
     output: 'export'
 }
 
