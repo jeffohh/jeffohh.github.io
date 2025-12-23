@@ -3,9 +3,10 @@ import NextLink from 'next/link'
 import { Box, Button, Container } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 
-import pdfResume from '../public/pdfs/jle_resume-one.pdf'
+// import pdfResume from '../pdfs/jle_resume-one.pdf'
 
 const Resume = ( ) => {
+    const pdfResume = '/pdfs/jle_resume-one.pdf'
     return (
         <Layout>
             <Container  maxW="container.md">
@@ -18,10 +19,10 @@ const Resume = ( ) => {
                 </Box>
 
                 <iframe
-                src={pdfResume}
-                width="100%"
-                height="1080px"
-                style={{ border: 'none' }}
+                    src={pdfResume}
+                    width="100%"
+                    height="1080px"
+                    style={{ border: 'none' }}
                 />
 
             </Container>

@@ -9,6 +9,9 @@ import thumbRadioLoaded from '../public/images/works/radio-loaded.png'
 import thumbWonderland from '../public/images/works/wonderland.png'
 import thumbAceslinger from '../public/images/works/aceslinger.png'
 import thumbZippah from '../public/images/works/zippah.png'
+import thumbTank from '../public/images/works/tank.png'
+import thumbTanakasDay from '../public/images/works/tanakas-day.png'
+import thumbInfernoInc from '../public/images/works/inferno-inc.png'
 
 import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
 import thumbSpriteEditor from '../public/images/works/sprite-editor.png'
@@ -38,6 +41,21 @@ const Works = () => {
                     </Heading>
 
                     <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="inferno-inc" title="Inferno Inc." thumbnail={thumbInfernoInc}>
+                                The underworld's leading efficiency consultancy!
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="tanakas-day" title="Tanaka's Day" thumbnail={thumbTanakasDay}>
+                                A narrative-driven prototype about repetition, doubt, and the quiet weight of perfectionism.
+                            </WorkGridItem>
+                        </Section>
+                        <Section>
+                            <WorkGridItem id="tank" title="Tank: War of Walls" thumbnail={thumbTank}>
+                                A fast-paced reimaginination of Atari's classic Tank (1974).
+                            </WorkGridItem>
+                        </Section>
                         <Section>
                             <WorkGridItem id="dinos-td" title="Dinos TD" thumbnail={thumbDinosTD}>
                                 A dinosaur-themed tower defense game.
