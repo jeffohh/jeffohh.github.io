@@ -2,22 +2,21 @@
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
-    webpack: (config, options) => {
+    webpack: (config) => {
         config.module.rules.push({
             test: /\.pdf/,
             type: 'asset/resource',
         })
-        
+
         return config
     },
 
-    eslint: {
-        ignoreDuringBuilds: true,
+    images: {
+        unoptimized: true,
     },
 
     turbopack: {},
-
-    output: 'export'
+    output: 'export',
 }
 
 module.exports = nextConfig
