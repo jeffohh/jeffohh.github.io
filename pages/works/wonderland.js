@@ -12,7 +12,17 @@ const Work = () => {
                 Wonderland <Badge>2023</Badge>
                 </Title>
                 <P>
-                    A puzzle horror game.
+                    Wonderland focuses on Ava as she faces a variety of fears related to growing up, all the while experiencing symptoms of Alice in Wonderland Syndrome.
+                </P>
+                <br></br>
+                <P>
+                    Wonderland was a 3-month project created in collaboration of
+                    Jeffrey Le  (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
+                    Cleveland Parker (<Link href="https://github.com/clevelparker">@clevelparker</Link>),
+                    Rachel Kletke (<Link href="https://github.com/Nitro-circus">@Nitro-circus</Link>),
+                    Felisitas M Purnomo (<Link href="https://github.com/Felice234">@Felice234</Link>), and
+                    Daming Li. This served as our EAE 3720 Alternative Game Development project for
+                    the Entertainment Arts and Engineering program at the University of Utah.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>

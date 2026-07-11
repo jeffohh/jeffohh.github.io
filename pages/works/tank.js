@@ -12,7 +12,22 @@ const Work = () => {
                 Tank: War of Walls <Badge>2025</Badge>
                 </Title>
                 <P>
-                    WIP.
+                    Step into the arena in Trap Tank, a fast-paced reimagining of Atari's classic Tank (1974).
+                    You have 2 minutes to destroy as many enemy tanks as possible—but it's not just about firepower!
+                </P>
+                <br></br>
+                <P>
+                    Tank: War of Walls was a 3-week project created in collaboration of
+                    Shuowei Wu,
+                    Yunzheng Cai,
+                    Jeffrey Le (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
+                    Minghao Yang (Benjamin) (<Link href="https://github.com/Benjamin5774">@Benjamin5774</Link>),
+                    Karianne Hutchinson,
+                    Jiawei Shao,
+                    Warren Yan,
+                    and Lin Lin (<Link href="https://github.com/Iliac-dot">@Iliac-dot</Link>).
+                    This served as one of our EAE 6100 Rapid Prototyping projects for
+                    the Masters Entertainment Arts and Engineering program at the University of Utah.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>
@@ -22,7 +37,7 @@ const Work = () => {
                     <ListItem>
                         <Meta>Website</Meta>
                         <Link href="https://benjaminy.itch.io/tank">
-                            https://benjaminy.itch.io/tank<ExternalLinkIcon mx="2px"/>
+                            https://benjaminy.itch.io/tank <ExternalLinkIcon mx="2px"/>
                         </Link>
                     </ListItem>
                     <ListItem>

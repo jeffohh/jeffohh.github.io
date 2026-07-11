@@ -12,7 +12,35 @@ const Work = () => {
                 Inferno Inc. <Badge>2025</Badge>
                 </Title>
                 <P>
-                    WIP.
+                    You've just been hired as the newest employee in Hell's most ambitious corporation.
+                    Under new management, Inferno Inc. is on a mission to Make Hell More Efficient™,
+                    and we need your help to reorganize the Nine Circles into a smooth-running machine of eternal torment. 
+                </P>
+                <br></br>
+                <P>
+                    Drag souls to their proper punishments, solve devilish puzzles,
+                    and optimize damnation itself in this darkly comedic management sim meets puzzle adventure.
+                </P>
+                <br></br>
+                <P>
+                    Inferno Inc. was a 3-week project created in collaboration of
+                    Alfred An,
+                    Yuhan Lin,
+                    Angelina Bologna,
+                    Deepak Kari,
+                    Jeffrey Le (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
+                    Yueling (Lily) Chen,
+                    Ray Gan,
+                    Yilun Tang,
+                    Kairui Xu,
+                    Warren Yan,
+                    Lucas Ren,
+                    JJ,
+                    Yufan Lu,
+                    Yuanlye Qiao,
+                    and Nathan Kelley.
+                    This served as one of our EAE 6100 Rapid Prototyping projects for
+                    the Masters Entertainment Arts and Engineering program at the University of Utah.
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>

@@ -12,7 +12,11 @@ const Work = () => {
                     Aceslinger <Badge>2019</Badge>
                 </Title>
                 <P>
-                    A game I solo developed.
+                    Duel your enemies, gain money, and collect and trade guns! Venture to become the richest, baddest gunslinger in the West!
+                </P>
+                <br></br>
+                <P>
+                    This project was a summer project I solo developed and released in 2019!
                 </P>
                 <List ml={4} my={4}>
                     <ListItem>

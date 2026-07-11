@@ -12,8 +12,39 @@ const Work = () => {
                 Tanaka's Day <Badge>2025</Badge>
                 </Title>
                 <P>
-                    WIP.
+                    Tanaka's Day is a narrative-driven prototype about repetition, doubt, and the quiet weight of perfectionism. 
                 </P>
+                <br></br>
+                <P>
+                    You play as Tanaka Ryo, a finance clerk working late at the Arisaka Corporation.
+                    The task seems simple — sort, approve, or reject incoming documents according to strict company rules.
+                    Every decimal must be exact, every signature must be clear, every stamp perfectly placed. 
+                </P>
+                <br></br>
+                <P>
+                    But as time passes, Tanaka's thoughts begin to loop.
+                    Did I check that number? Was the stamp straight?
+                    Maybe I should look again.
+                    The longer you work, the harder it becomes to separate duty from compulsion. 
+                </P>
+                <br></br>
+                <P>
+                    This short experience aims to give players a glimpse into the mental cycles experienced by those with Obsessive-Compulsive Disorder (OCD) — the constant urge to recheck, the fear of mistakes, and the exhaustion of never feeling done.
+                </P>
+                <br></br>
+                <P>
+                    Tanaka's Day was a 3-week project created in collaboration of
+                    Lexie,
+                    Lexuan (Price) Chen,
+                    Xiangyu (Raphael) Shi,
+                    Jeffrey Le  (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
+                    Kedar Wakade,
+                    Kaustubh Ranbhidkar,
+                    and Kairui Xu.
+                    This served as one of our EAE 6100 Rapid Prototyping projects for
+                    the Masters Entertainment Arts and Engineering program at the University of Utah.
+                </P>
+
                 <List ml={4} my={4}>
                     <ListItem>
                         <Meta>Role</Meta>
