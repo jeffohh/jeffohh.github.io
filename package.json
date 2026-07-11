@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.19.0"
   },
   "keywords": [],
   "author": "Jeffrey Le<jeffreyle20@gmail.com>",
