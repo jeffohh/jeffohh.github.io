@@ -29,7 +29,7 @@ const Work = () => {
                     Angelina Bologna,
                     Deepak Kari,
                     Jeffrey Le (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
-                    Yueling (Lily) Chen,
+                    Yueling "Lily" Chen,
                     Ray Gan,
                     Yilun Tang,
                     Kairui Xu,

@@ -21,7 +21,7 @@ const Work = () => {
                     Shuowei Wu,
                     Yunzheng Cai,
                     Jeffrey Le (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
-                    Minghao Yang (Benjamin) (<Link href="https://github.com/Benjamin5774">@Benjamin5774</Link>),
+                    Minghao "Benjamin" Yang (<Link href="https://github.com/Benjamin5774">@Benjamin5774</Link>),
                     Karianne Hutchinson,
                     Jiawei Shao,
                     Warren Yan,
@@ -37,7 +37,7 @@ const Work = () => {
                     <ListItem>
                         <Meta>Website</Meta>
                         <Link href="https://benjaminy.itch.io/tank">
-                            https://benjaminy.itch.io/tank <ExternalLinkIcon mx="2px"/>
+                            https://benjaminy.itch.io/tank<ExternalLinkIcon mx="2px"/>
                         </Link>
                     </ListItem>
                     <ListItem>

@@ -35,8 +35,8 @@ const Work = () => {
                 <P>
                     Tanaka's Day was a 3-week project created in collaboration of
                     Lexie,
-                    Lexuan (Price) Chen,
-                    Xiangyu (Raphael) Shi,
+                    Lexuan "Price" Chen,
+                    Xiangyu "Raphael" Shi,
                     Jeffrey Le  (<Link href="https://github.com/jeffohh">@jeffohh</Link>),
                     Kedar Wakade,
                     Kaustubh Ranbhidkar,

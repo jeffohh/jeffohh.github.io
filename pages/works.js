@@ -12,6 +12,7 @@ import thumbZippah from '../public/images/works/zippah.png'
 import thumbTank from '../public/images/works/tank.png'
 import thumbTanakasDay from '../public/images/works/tanakas-day.png'
 import thumbInfernoInc from '../public/images/works/inferno-inc.png'
+import thumbHinges from '../public/images/works/hinges.png'
 
 import thumbKitchenKiller from '../public/images/works/kitchen-killer.png'
 import thumbSpriteEditor from '../public/images/works/sprite-editor.png'
@@ -41,6 +42,11 @@ const Works = () => {
                     </Heading>
 
                     <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                        <Section>
+                            <WorkGridItem id="hinges" title="Hinges" thumbnail={thumbHinges}>
+                                Knock. Knock.
+                            </WorkGridItem>
+                        </Section>
                         <Section>
                             <WorkGridItem id="inferno-inc" title="Inferno Inc." thumbnail={thumbInfernoInc}>
                                 The underworld's leading efficiency consultancy!

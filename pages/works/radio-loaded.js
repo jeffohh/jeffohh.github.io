@@ -34,7 +34,7 @@ const Work = () => {
                     <ListItem>
                         <Meta>Website</Meta>
                         <Link href="https://github.com/jeffohh/Radio-Loaded">
-                            https://github.com/jeffohh/Radio-Loaded <ExternalLinkIcon mx="2px"/>
+                            https://github.com/jeffohh/Radio-Loaded<ExternalLinkIcon mx="2px"/>
                         </Link>
                     </ListItem>
                     <ListItem>
