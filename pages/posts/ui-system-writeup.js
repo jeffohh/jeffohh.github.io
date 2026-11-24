@@ -1,12 +1,13 @@
-import { Container, Heading, Text } from '@chakra-ui/react'
+import { Badge, Container, Text } from '@chakra-ui/react'
+import { Title } from '../../components/work'
 import Layout from '../../components/layouts/article'
 
 const UISystemWriteup = () => (
     <Layout title="UI System Writeup">
         <Container maxW="container.sm">
-            <Heading as="h3" fontSize={20} mb={4}>
-                UI System Writeup
-            </Heading>
+            <Title parent="Posts" href="/posts">
+                UI System Writeup <Badge>2026</Badge>
+            </Title>
             <Text>Writeup coming soon.</Text>
         </Container>
     </Layout>

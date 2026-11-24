@@ -4,7 +4,7 @@ import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
 import thumbGameDay from '../public/images/posts/gdac-first.jpg'
-import thumbUISystem from '../public/images/posts/ui-system-writeup.svg'
+import thumbUISystem from '../public/images/posts/ui-system-writeup/ui-system-writeup.jpg'
 
 const Posts = () => (
     <Layout title="Posts">
@@ -25,7 +25,7 @@ const Posts = () => (
                         title="UI System Writeup"
                         thumbnail={thumbUISystem}
                         href="/posts/ui-system-writeup"
-                        target="_self"
+                        internal
                     >
                         A writeup about the UI system.
                     </GridItem>
