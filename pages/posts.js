@@ -27,7 +27,7 @@ const Posts = () => (
                         href="/posts/ui-system-writeup"
                         internal
                     >
-                        A writeup about the UI system.
+                        Building UI for a custom game engine
                     </GridItem>
                 </SimpleGrid>
             </Section>
