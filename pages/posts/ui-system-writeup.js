@@ -1,10 +1,14 @@
-import { Badge, Code, Container, Flex, Heading, Image, Button, Box, ListItem, Text, UnorderedList } from '@chakra-ui/react'
+import { Badge, Code, Container, Flex, Heading, Image, Button, Icon, ListItem, Text, UnorderedList } from '@chakra-ui/react'
 import { Title } from '../../components/work'
 import P from '../../components/paragraph'
 import NextLink from 'next/link'
 import Layout from '../../components/layouts/article'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import CodeBlock from '../../components/code-block'
+import {
+    SiGithub
+} from 'react-icons/si'
+import { FiTag } from 'react-icons/fi';
 
 const UISystemWriteup = () => (
     <Layout title="UI System Writeup">
@@ -40,6 +44,9 @@ const UISystemWriteup = () => (
                     Dependency on Graphics project
                 </ListItem>
                 <ListItem>
+                    A high tolerance for meshes
+                </ListItem>
+                <ListItem>
                     Render State Bits
                 </ListItem>
                 <ListItem>
@@ -51,9 +58,35 @@ const UISystemWriteup = () => (
                 Installation
             </Heading>
             <Text>
-                To install, download the <Code>UI.zip</Code> file using the link below.
-                The project comes with:
+                To install, download the <Code>.zip</Code> file using the link below.
             </Text>
+
+            <Flex justify="center" align="center" gap={3} my={5}>
+                <NextLink
+                    href="https://github.com/jeffohh/eae6320-ui-system"
+                    target="_blank"
+                >
+                    <Button
+                        leftIcon={<Icon as={SiGithub} />}
+                        colorScheme="teal"
+                    >
+                        View Source
+                    </Button>
+                </NextLink>
+
+                <NextLink
+                    href="https://github.com/jeffohh/eae6320-ui-system/releases"
+                    target="_blank"
+                >
+                    <Button
+                        leftIcon={<Icon as={FiTag} />}
+                        colorScheme="teal"
+                    >
+                        Releases
+                    </Button>
+                </NextLink>
+            </Flex>
+
             <UnorderedList paddingLeft={4} ml={4} my={4}>
                 <ListItem>
                     <Text>A UI folder that represents the UI project
@@ -63,36 +96,32 @@ const UISystemWriteup = () => (
                     <Code>uiQuad.lua</Code>, a normalized mesh used for rendering box frames
                 </ListItem>
                 <ListItem>
-                    <Code>Fonts/...</Code>, mesh representations of letters
-                </ListItem>
-                <ListItem>
                     <Code>Vertex/uiFrame.shader</Code>, a shader used to translate uiQuad to screen space
                 </ListItem>
                 <ListItem>
                     <Code>Fragment/uiFrame.shader</Code>, a shader used to color UI
                 </ListItem>
+
+                <ListItem>
+                    Font Packs
+                </ListItem>
+
+                <UnorderedList paddingLeft={4} ml={4} marginBottom={4}>
+                    <ListItem>
+                        Comic Sans MS
+                    </ListItem>
+                    <ListItem>
+                        JetBrains Mono
+                    </ListItem>
+                </UnorderedList>
             </UnorderedList>
 
+            
+            
             <Flex gap={4} align="center">
                 <Image src="/images/posts/ui-system-writeup/directory-1.png" alt="Directory Image 1" width="50%" />
                 <Image src="/images/posts/ui-system-writeup/directory-2.png" alt="Directory Image 2" width="50%" />
             </Flex>
-
-            <Box align="center" my={4}>
-                <NextLink href={"https://drive.google.com/file/d/1iE14j04xc8Ofif3Nr5jyxvw9Eb5pC-s7/view?usp=sharing"} target='_blank'>
-                    <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
-                        Google Drive Download (.zip)
-                    </Button>
-                </NextLink>
-            </Box>
-
-            <Box align="center" my={4}>
-                <NextLink href={"/posts"} target='_blank'>
-                    <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
-                        View Source (github + releases coming soon i swear)
-                    </Button>
-                </NextLink>
-            </Box>
 
             <Heading as="h6" fontSize={16} mt={6} mb={3}>
                 Updating <Code>AssetsToBuild.lua</Code>
@@ -116,7 +145,7 @@ local module = {
     }
 }
 
-+for i = 97, 98 do -- dynamically add to meshes table ('a' = 97, 'b' = 98)
++for i = 33, 126 do -- dynamically add to meshes table ('!' = 33, '~' = 126)
 +   module.meshes[#module.meshes + 1] = string.format( "Meshes/Fonts/%03d.lua", i )
 +end
 
@@ -136,15 +165,15 @@ return module`}</CodeBlock>
     m_frame->anchorX = 0.5f; // [0.0f - 1.0f]
     m_frame->anchorY = 0.5f; // [0.0f - 1.0f]
     m_frame->position = UI:sUDim2(0.0f, 0.0f, 0.0f, 0.0f); // scaleX, offsetX, scaleY, offsetY
-    m_frame->size = UI:sUDim2(0.25f, 0.0f, 0.25f, 0.0f); // scaleX, offsetX, scaleY, offsetY
+    m_frame->size = UI:sUDim2(0.25f, 0.0f, 0.25f, 0.0f);   // scaleX, offsetX, scaleY, offsetY
     m_frame->backgroundColor = UI::sColor::FromRGBA(255, 0, 0, 255)
 
     // 3. Creating & Adjusting a Label (extends cUIFrame)
     m_label = m_uiManager.CreateElement<UI::cUILabel>();
     m_label->textColor = UI::sColor::FromRGBA(255, 255, 255, 255);
-    m_label->text = "hello world";
-    m_label->textHeight = 2.0f;
-    m_label->letterSpacing = 17.0f;
+    m_label->text = "hello world";         // displayed text
+    m_label->textHeight = 2.0f;            // size of text
+    m_label->letterSpacing = 17.0f;        // spacing between letters
     m_label->alignX = eTextAlignX::Center; // eTextAlignX::Left, eTextAlignX::Center, eTextAlignX::Right
     m_label->alignY = eTextAlignX::Center; // eTextAlignX::Top, eTextAlignX::Center, eTextAlignX::Bottom
 
