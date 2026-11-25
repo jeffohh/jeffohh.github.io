@@ -4,6 +4,7 @@ import P from '../../components/paragraph'
 import NextLink from 'next/link'
 import Layout from '../../components/layouts/article'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import CodeBlock from '../../components/code-block'
 
 const UISystemWriteup = () => (
     <Layout title="UI System Writeup">
@@ -11,12 +12,25 @@ const UISystemWriteup = () => (
             <Title parent="Posts" href="/posts">
                 UI System Writeup <Badge>2026</Badge>
             </Title>
+
             <P>
                 As part of GAMES 6320 Game Engineering II's project, we were to build our
                 own game engine from the ground up. A task we were given was to extend the
                 game engine with our own system such that our peers could use to implement
                 into their own engine and use to create their own game.
             </P>
+
+            <Heading as="h4" fontSize={18} mt={6} mb={3}>
+                DISCLAIMER
+            </Heading>
+            <Text>
+                Project as of right now is <b>missing buttons</b> and I only exported <b>characters 'a' and 'b'</b> for testing.
+                I also coded all this with the assumption that we all did our Graphics project the same (wow!!!! so amazing) —
+                we shall see if this is even portable.
+            </Text>
+
+            <br></br>
+            <hr></hr>
 
             <Heading as="h4" fontSize={18} mt={6} mb={3}>
                 Requirements
@@ -26,7 +40,10 @@ const UISystemWriteup = () => (
                     Dependency on Graphics project
                 </ListItem>
                 <ListItem>
-                    Rendering Bits Support
+                    Render State Bits
+                </ListItem>
+                <ListItem>
+                    Adjustments to make <Code>sUIDrawData</Code> fit your mesh and effect submission
                 </ListItem>
             </UnorderedList>
             
@@ -62,18 +79,105 @@ const UISystemWriteup = () => (
             </Flex>
 
             <Box align="center" my={4}>
-                <NextLink href={"/posts"} target='_blank'>
+                <NextLink href={"https://drive.google.com/file/d/1iE14j04xc8Ofif3Nr5jyxvw9Eb5pC-s7/view?usp=sharing"} target='_blank'>
                     <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
                         Google Drive Download (.zip)
                     </Button>
                 </NextLink>
             </Box>
-            <Heading as="h5" fontSize={16} mt={6} mb={3}>
+
+            <Box align="center" my={4}>
+                <NextLink href={"/posts"} target='_blank'>
+                    <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
+                        View Source (github + releases coming soon i swear)
+                    </Button>
+                </NextLink>
+            </Box>
+
+            <Heading as="h6" fontSize={16} mt={6} mb={3}>
                 Updating <Code>AssetsToBuild.lua</Code>
             </Heading>
             <Text>
-                
+                With the addition of <Code>*.shader</Code> and <Code>*.lua</Code> meshes,
+                we need to modify our <Code>AssetsToBuild.lua</Code> to build the required shaders
+                and meshes for it to work. The <Code>Fonts</Code> folder has quite a lot of meshes —
+                luckily, we can use Lua to append each item with code!
             </Text>
+            <CodeBlock language="lua" diff>{`
+local module = {
+    shaders =
+    {
++       { path = "Shaders/Fragment/uiFrame.shader", arguments = { "fragment" } },
++       { path = "Shaders/Vertex/uiFrame.shader", arguments = { "vertex" } },
+    },
+
+    meshes = {
++       "Meshes/uiQuad.lua",
+    }
+}
+
++for i = 97, 98 do -- dynamically add to meshes table ('a' = 97, 'b' = 98)
++   module.meshes[#module.meshes + 1] = string.format( "Meshes/Fonts/%03d.lua", i )
++end
+
+return module`}</CodeBlock>
+
+<hr></hr>
+
+            <Heading as="h4" fontSize={18} mt={6} mb={3}>
+                Quick Start
+            </Heading>
+<CodeBlock language="cpp">{`cResult cMyGame::Initialize() {
+    // 1. Load shared UI quad mesh and shaders
+    m_uiManager.Initialize();
+
+    // 2. Creating & Adjusting a Frame
+    m_frame = m_uiManager.CreateElement<UI::cUIFrame>();
+    m_frame->anchorX = 0.5f; // [0.0f - 1.0f]
+    m_frame->anchorY = 0.5f; // [0.0f - 1.0f]
+    m_frame->position = UI:sUDim2(0.0f, 0.0f, 0.0f, 0.0f); // scaleX, offsetX, scaleY, offsetY
+    m_frame->size = UI:sUDim2(0.25f, 0.0f, 0.25f, 0.0f); // scaleX, offsetX, scaleY, offsetY
+    m_frame->backgroundColor = UI::sColor::FromRGBA(255, 0, 0, 255)
+
+    // 3. Creating & Adjusting a Label (extends cUIFrame)
+    m_label = m_uiManager.CreateElement<UI::cUILabel>();
+    m_label->textColor = UI::sColor::FromRGBA(255, 255, 255, 255);
+    m_label->text = "hello world";
+    m_label->textHeight = 2.0f;
+    m_label->letterSpacing = 17.0f;
+    m_label->alignX = eTextAlignX::Center; // eTextAlignX::Left, eTextAlignX::Center, eTextAlignX::Right
+    m_label->alignY = eTextAlignX::Center; // eTextAlignX::Top, eTextAlignX::Center, eTextAlignX::Bottom
+
+    return Results::Success;
+}
+
+void cMyGame::SubmitDataToBeRendered(...) {
+    // 4. Submit all active UI elements to Graphics
+    uint16_t screenWidth, screenHeight;
+    GetCurrentResolution(screenWidth, screenHeight);
+    m_uiManager.Submit(screenWidth, screenHeight);
+}
+
+cResult cMyGame::CleanUp() {
+    // 5. Release shared GPU resources and UI elements
+    m_uiManager.CleanUp();
+    return Results::Success;
+}`}</CodeBlock>
+
+            <Heading as="h4" fontSize={18} mt={6} mb={3}>
+                Exporting Your Own Fonts
+            </Heading>
+            <Text>
+                Each letter is a mesh representation of that letter. The mesh letter should be named it's ASCII encoded
+                number (i.e. 'a' is <Code>097.lua</Code>, 'A' is <Code>065.lua</Code>). You can export your own letter
+                mesh from Maya 2019 using the export plugin you made for it.
+            </Text>
+            <br></br>
+            <Text>
+                In Maya 2019 you need to: choose your font, type the letter you need, center the X alignment, make the letter
+                flat (i.e. non-3D), and export that letter to it's according ASCII representation.
+            </Text>
+
         </Container>
     </Layout>
 )
