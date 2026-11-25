@@ -60,29 +60,25 @@ const UISystemWriteup = () => (
             </Text>
 
             <Flex justify="center" align="center" gap={3} my={5}>
-                <NextLink
+                <Button
+                    as={NextLink}
                     href="https://github.com/jeffohh/eae6320-ui-system"
                     target="_blank"
+                    leftIcon={<Icon as={SiGithub} />}
+                    colorScheme="teal"
                 >
-                    <Button
-                        leftIcon={<Icon as={SiGithub} />}
-                        colorScheme="teal"
-                    >
-                        View Source
-                    </Button>
-                </NextLink>
+                    View Source
+                </Button>
 
-                <NextLink
+                <Button
+                    as={NextLink}
                     href="https://github.com/jeffohh/eae6320-ui-system/releases"
                     target="_blank"
+                    leftIcon={<Icon as={FiTag} />}
+                    colorScheme="teal"
                 >
-                    <Button
-                        leftIcon={<Icon as={FiTag} />}
-                        colorScheme="teal"
-                    >
-                        Releases
-                    </Button>
-                </NextLink>
+                    Releases
+                </Button>
             </Flex>
 
             <UnorderedList paddingLeft={4} ml={4} my={4}>

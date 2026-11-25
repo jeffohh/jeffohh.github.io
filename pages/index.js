@@ -106,11 +106,15 @@ const Page = ( ) => {
                     </Paragraph>
 
                     <Box align="center" my={4}>
-                        <NextLink scroll={false} href="/works">
-                            <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
-                                See Portfolio
-                            </Button>
-                        </NextLink>
+                        <Button
+                            as={NextLink}
+                            scroll={false}
+                            href="/works"
+                            rightIcon={<ChevronRightIcon/>}
+                            colorScheme='teal'
+                        >
+                            See Portfolio
+                        </Button>
                     </Box>
 
                 </Section>

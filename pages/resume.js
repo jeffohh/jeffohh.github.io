@@ -11,11 +11,15 @@ const Resume = ( ) => {
         <Layout>
             <Container  maxW="container.md">
                 <Box align="center" my={4}>
-                    <NextLink href={pdfResume} target='_blank'>
-                        <Button rightIcon={<ChevronRightIcon/>} colorScheme='teal'>
-                            Open Resume
-                        </Button>
-                    </NextLink>
+                    <Button
+                        as={NextLink}
+                        href={pdfResume}
+                        target='_blank'
+                        rightIcon={<ChevronRightIcon/>}
+                        colorScheme='teal'
+                    >
+                        Open Resume
+                    </Button>
                 </Box>
 
                 <iframe
