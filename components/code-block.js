@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Box } from '@chakra-ui/react'
+import { Box, useColorMode, useColorModeValue } from '@chakra-ui/react'
 
 const highlighterPromises = new Map()
 
@@ -18,7 +18,9 @@ const getHighlighter = (language, theme) => {
     return highlighterPromises.get(key)
 }
 
-const CodeBlock = ({ children, language = 'cpp', theme = 'github-dark', diff = false }) => {
+const CodeBlock = ({ children, language = 'cpp', theme, diff = false }) => {
+    const { colorMode } = useColorMode()
+    const resolvedTheme = theme ?? (colorMode === 'light' ? 'github-light' : 'github-dark')
     const code = typeof children === 'string' ? children.trim() : ''
     const [highlightedCode, setHighlightedCode] = useState('')
 
@@ -55,8 +57,8 @@ const CodeBlock = ({ children, language = 'cpp', theme = 'github-dark', diff = f
             }]
             : []
 
-        getHighlighter(language, theme)
-            .then(highlighter => highlighter.codeToHtml(source, { lang: language, theme, transformers }))
+        getHighlighter(language, resolvedTheme)
+            .then(highlighter => highlighter.codeToHtml(source, { lang: language, theme: resolvedTheme, transformers }))
             .then(html => {
                 if (!cancelled) setHighlightedCode(html)
             })
@@ -65,7 +67,7 @@ const CodeBlock = ({ children, language = 'cpp', theme = 'github-dark', diff = f
         return () => {
             cancelled = true
         }
-    }, [code, diff, language, theme])
+    }, [code, diff, language, resolvedTheme])
 
     return (
         <Box
@@ -79,31 +81,33 @@ const CodeBlock = ({ children, language = 'cpp', theme = 'github-dark', diff = f
                     fontFamily: 'mono',
                     fontSize: 'sm',
                     lineHeight: 'tall',
-                    backgroundColor: '#24292e',
-                    color: '#e1e4e8',
                 },
                 '& .diff-added': {
-                    backgroundColor: 'rgba(46, 160, 67, 0.22)',
+                    backgroundColor: useColorModeValue('rgba(46, 160, 67, 0.12)', 'rgba(46, 160, 67, 0.22)'),
                 },
                 '& .diff-removed': {
-                    backgroundColor: 'rgba(248, 81, 73, 0.22)',
+                    backgroundColor: useColorModeValue('rgba(248, 81, 73, 0.12)', 'rgba(248, 81, 73, 0.22)'),
                 },
                 '& .diff-marker': {
                     display: 'inline-block',
                     width: '1.5em',
                     fontWeight: 'bold',
-                    color: '#3fb950',
+                    color: useColorModeValue('#1a7f37', '#3fb950'),
                     userSelect: 'none',
                 },
                 '& .diff-removed .diff-marker': {
-                    color: '#ff7b72',
+                    color: useColorModeValue('#cf222e', '#ff7b72'),
                 },
             }}
         >
             {highlightedCode ? (
                 <Box dangerouslySetInnerHTML={{ __html: highlightedCode }} />
             ) : (
-                <Box as="pre">
+                <Box
+                    as="pre"
+                    bg={useColorModeValue('white', '#24292e')}
+                    color={useColorModeValue('gray.800', '#e1e4e8')}
+                >
                     <Box as="code">{code}</Box>
                 </Box>
             )}

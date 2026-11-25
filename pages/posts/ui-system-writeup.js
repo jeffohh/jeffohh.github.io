@@ -1,4 +1,4 @@
-import { Badge, Code, Container, Flex, Heading, Image, Button, Icon, ListItem, Text, UnorderedList } from '@chakra-ui/react'
+import { Badge, Code, Container, Divider, Flex, Heading, Image, Button, Icon, ListItem, Text, UnorderedList } from '@chakra-ui/react'
 import { Title } from '../../components/work'
 import P from '../../components/paragraph'
 import NextLink from 'next/link'
@@ -12,7 +12,7 @@ import { FiTag } from 'react-icons/fi';
 
 const UISystemWriteup = () => (
     <Layout title="UI System Writeup">
-        <Container maxW="container.sm">
+        <Container maxW="container.md">
             <Title parent="Posts" href="/posts">
                 UI System Writeup <Badge>2026</Badge>
             </Title>
@@ -25,16 +25,14 @@ const UISystemWriteup = () => (
             </P>
 
             <Heading as="h4" fontSize={18} mt={6} mb={3}>
-                DISCLAIMER
+                Work in progress
             </Heading>
             <Text>
-                Project as of right now is <b>missing buttons</b> and I only exported <b>characters 'a' and 'b'</b> for testing.
-                I also coded all this with the assumption that we all did our Graphics project the same (wow!!!! so amazing) —
-                we shall see if this is even portable.
+                Project is missing <b>buttons</b> and doesn't support <b>hierarchies/parent-child</b>.
             </Text>
 
             <br></br>
-            <hr></hr>
+            <Divider borderColor="blackAlpha.300" _dark={{ borderColor: 'whiteAlpha.300' }} />
 
             <Heading as="h4" fontSize={18} mt={6} mb={3}>
                 Requirements
@@ -44,7 +42,7 @@ const UISystemWriteup = () => (
                     Dependency on Graphics project
                 </ListItem>
                 <ListItem>
-                    A high tolerance for meshes
+                    A high tolerance for submitting a mesh per letter
                 </ListItem>
                 <ListItem>
                     Render State Bits
@@ -117,7 +115,6 @@ const UISystemWriteup = () => (
             </UnorderedList>
 
             
-            
             <Flex gap={4} align="center">
                 <Image src="/images/posts/ui-system-writeup/directory-1.png" alt="Directory Image 1" width="50%" />
                 <Image src="/images/posts/ui-system-writeup/directory-2.png" alt="Directory Image 2" width="50%" />
@@ -151,7 +148,8 @@ local module = {
 
 return module`}</CodeBlock>
 
-<hr></hr>
+<br></br>
+<Divider borderColor="blackAlpha.300" _dark={{ borderColor: 'whiteAlpha.300' }} />
 
             <Heading as="h4" fontSize={18} mt={6} mb={3}>
                 Quick Start
@@ -203,8 +201,8 @@ cResult cMyGame::CleanUp() {
             </Text>
             <br></br>
             <Text>
-                In Maya 2019 you need to: choose your font, type the letter you need, center the X alignment, make the letter
-                flat (i.e. non-3D), and export that letter to it's according ASCII representation.
+                In Maya 2019 you need to: choose your font, type the letter you need, center the X alignment, turn off
+                extrusions to make the mesh flat, and export that letter to it's according ASCII representation.
             </Text>
 
         </Container>
